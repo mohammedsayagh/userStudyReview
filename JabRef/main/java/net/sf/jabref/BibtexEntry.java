@@ -372,7 +372,7 @@ public class BibtexEntry
             }
         }
 
-        return null;
+        return JabRefPreferences.getEmptyField();
     }
 
     public String getCiteKey() {

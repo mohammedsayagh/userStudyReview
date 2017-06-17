@@ -822,6 +822,13 @@ public class JabRefPreferences {
 	@Config(name = "useIEEEAbrv", 
 			defaultValue = "false")
 	private static boolean useIEEEAbrv;
+	
+	@Config (name = "emptyField", 
+			defaultValue = "NA", 
+			constraint = "NA|Na|na|-",
+			comment = "The text that should be printed if "
+					+ "Owner or TimeStamp is empty")
+	private static String emptyField;
 
 	//non-default preferences
 	private final static String CUSTOM_TYPE_NAME = "customTypeName_";
@@ -3200,5 +3207,9 @@ public class JabRefPreferences {
 
 	public static void setValueDelimiters2(int valueDelimiters) {
 		JabRefPreferences.valueDelimiters = valueDelimiters;
+	}
+
+	public static String getEmptyField() {
+		return emptyField;
 	}
 }
